@@ -1,10 +1,10 @@
 import { Component } from "react";
 import getImages from '../services/getImages';
-import css from './ImageGalary.module.css';
 import Loader from '../Loader/Loader';
 import LoadMore from "components/Button/Button";
-import { Notify } from "notiflix";
 import GalleryItem from "components/ImageGalleryItem/ImageGalleryItem";
+import css from './ImageGalary.module.css';
+import { Notify } from "notiflix";
 import PropTypes from 'prop-types';
 
 const STATUS = {
@@ -45,15 +45,6 @@ class ImageGallery extends Component {
         Notify.failure('Ooops, there are no such images. Please try again.');
         return;
         };
-
-    // const nextImages = hits.map(
-    //         ({ id, tags, webformatURL, largeImageURL }) => ({
-    //             id,
-    //             tags,
-    //             webformatURL,
-    //             largeImageURL,
-    //         })
-    //     );
 
       this.setState ({
         images: [...images, ...hits],
