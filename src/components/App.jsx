@@ -3,9 +3,10 @@ import { Notify } from 'notiflix';
 import css from './App.module.css';
 import getImages from './services/getImages';
 import SearchBar from './Searchbar/Searchbar';
-import ImageGallery from './ImageGallery/imageGallery';
+
 import LoadMore from './Button/Button';
 import Loader from './Loader/Loader';
+import ImageGallery from './ImageGallery/ImageGallery';
 
 const STATUS = {
     IDLE: "idle",
