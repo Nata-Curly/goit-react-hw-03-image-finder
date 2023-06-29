@@ -1,7 +1,5 @@
-// import LoadMore from "components/Button/Button";
 import GalleryItem from "components/ImageGalleryItem/ImageGalleryItem";
 import css from './ImageGallery.module.css';
-// import { Notify } from "notiflix";
 import PropTypes from 'prop-types';
 
 const ImageGallery = ({ images }) => {
