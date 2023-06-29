@@ -6,11 +6,11 @@ import PropTypes from 'prop-types';
 class GalleryItem extends Component {
     state = {
         showModal: false,
-    }
+    };
 
     toggleModal = () => {
         this.setState(({ showModal }) => ({ showModal: !showModal }));
-    }
+    };
 
         render() {
             const { showModal } = this.state;

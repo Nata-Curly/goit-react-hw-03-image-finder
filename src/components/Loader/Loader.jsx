@@ -3,10 +3,10 @@ import { Dna } from 'react-loader-spinner'
 const Loader = () => {
     return ( <Dna
   visible={true}
-  height="200"
-  width="200"
+  height="150"
+  width="150"
   ariaLabel="dna-loading"
-  wrapperStyle={{}}
+  wrapperStyle={{display: 'inline-block', textAlign: 'center'}}
   wrapperClass="dna-wrapper"
 /> );
 }
