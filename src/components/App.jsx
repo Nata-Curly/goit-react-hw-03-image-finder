@@ -41,6 +41,7 @@ class App extends Component {
         return;
         };
 
+        
       this.setState ({
         images: [...images, ...hits],
         status: STATUS.RESOLVED,
@@ -60,7 +61,7 @@ class App extends Component {
       Notify.failure('Field is empty');
       return;
     }
-    this.setState({ searchText })
+    this.setState({ searchText, images: [], page: 1, totalHits: 0 })
   };
 
   render() {
@@ -73,8 +74,8 @@ class App extends Component {
         <SearchBar handleSearch={this.handleSearch} />
         
         {images.length > 0 && <ImageGallery images={images} />}
-        {showButton && <LoadMore onClick={this.onNextPage} />}
         {status === STATUS.PENDING && <Loader />}
+        {showButton && <LoadMore onClick={this.onNextPage} />}
       </div>
     );
   }
